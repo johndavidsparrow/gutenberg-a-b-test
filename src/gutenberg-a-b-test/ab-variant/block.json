@@ -1,0 +1,10 @@
+{
+	"title": "A/B Test Variant",
+	"category": "widgets",
+	"icon": "randomize",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	}
+}

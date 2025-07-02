@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Gutenberg A B Test",
   "category": "widgets",
-  "icon": "smiley",
+  "icon": "randomize",
   "description": "Example block scaffolded with Create Block tool.",
   "example": {},
   "supports": {

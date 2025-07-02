@@ -8,7 +8,7 @@ return array(
 		'version' => '0.1.0',
 		'title' => 'Gutenberg A B Test',
 		'category' => 'widgets',
-		'icon' => 'smiley',
+		'icon' => 'randomize',
 		'description' => 'Example block scaffolded with Create Block tool.',
 		'example' => array(
 			
@@ -21,5 +21,29 @@ return array(
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
+	),
+	'ab-container' => array(
+		'title' => 'A/B Test Container',
+		'category' => 'widgets',
+		'icon' => 'randomize',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		)
+	),
+	'ab-variant' => array(
+		'title' => 'A/B Test Variant',
+		'category' => 'widgets',
+		'icon' => 'randomize',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'supports' => array(
+			'html' => false
+		)
 	)
 );
