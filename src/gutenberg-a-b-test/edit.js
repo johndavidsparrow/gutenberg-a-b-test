@@ -67,7 +67,6 @@ export default function Edit( attributes, setAttributes ) {
 						]
 					}
 					allowedBlocks={['create-block/ab-variant']}
-					templateLock="all"
 					orientation="horizontal"
 				/>
 			</div>

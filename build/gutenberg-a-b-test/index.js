@@ -277,7 +277,6 @@ function Edit(attributes, setAttributes) {
           label: 'B'
         }]],
         allowedBlocks: ['create-block/ab-variant'],
-        templateLock: "all",
         orientation: "horizontal"
       })
     })]
