@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -23,11 +23,30 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function Edit() {
     return (
-        <p { ...useBlockProps() }>
-            { __(
-                'Gutenberg A B Test – hello from the editor!',
-                'gutenberg-a-b-test'
-            ) }
-        </p>
+        <div { ...useBlockProps() }>
+            <InnerBlocks 
+                template={
+                    [
+                        [
+                            'create-block/ab-variant',
+                            {
+                                label: 'A'
+                            }
+
+                        ],
+                        [
+                            'create-block/ab-variant',
+                            {
+                                label: 'B'
+                            }
+
+                        ]
+                    ]
+                }
+                allowedBlocks={['create-block/ab-variant']}
+                templateLock="all"
+                orientation="horizontal"
+            />
+        </div>
     );
 }

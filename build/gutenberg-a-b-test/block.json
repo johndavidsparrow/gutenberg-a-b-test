@@ -7,6 +7,12 @@
   "category": "widgets",
   "icon": "randomize",
   "description": "Example block scaffolded with Create Block tool.",
+  "attributes": {
+    "id": {
+      "type": "string",
+      "label": "Tester"
+    }
+  },
   "example": {},
   "supports": {
     "html": false

@@ -10,6 +10,12 @@ return array(
 		'category' => 'widgets',
 		'icon' => 'randomize',
 		'description' => 'Example block scaffolded with Create Block tool.',
+		'attributes' => array(
+			'id' => array(
+				'type' => 'string',
+				'label' => 'Tester'
+			)
+		),
 		'example' => array(
 			
 		),
