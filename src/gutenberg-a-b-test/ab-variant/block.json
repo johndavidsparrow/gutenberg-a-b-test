@@ -4,6 +4,20 @@
 	"category": "widgets",
 	"icon": "randomize",
 	"description": "Example block scaffolded with Create Block tool.",
+	"attributes": {
+		"id": {
+			"type": "string",
+			"default": "A"
+		},
+		"label": {
+			"type": "string",
+			"default": "A"
+		},
+		"weighting": {
+			"type": "string",
+			"default": "50"
+		}
+	},
 	"example": {},
 	"supports": {
 		"html": false

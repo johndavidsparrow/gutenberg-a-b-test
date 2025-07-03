@@ -46,6 +46,20 @@ return array(
 		'category' => 'widgets',
 		'icon' => 'randomize',
 		'description' => 'Example block scaffolded with Create Block tool.',
+		'attributes' => array(
+			'id' => array(
+				'type' => 'string',
+				'default' => 'A'
+			),
+			'label' => array(
+				'type' => 'string',
+				'default' => 'A'
+			),
+			'weighting' => array(
+				'type' => 'string',
+				'default' => '50'
+			)
+		),
 		'example' => array(
 			
 		),
