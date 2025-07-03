@@ -21,7 +21,7 @@ import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
 
-import './ab-container';
+// import './ab-container';
 import './ab-variant';
 
 /**

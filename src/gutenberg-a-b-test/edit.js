@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, InnerBlocks } from '@wordpress/block-editor';
 import { PanelBody, TextControl } from '@wordpress/components';
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -32,16 +32,45 @@ import './editor.scss';
 export default function Edit( attributes, setAttributes ) {
 	const { id } = attributes;
 	return (
-		<InspectorControls>
-			<PanelBody>
-				<TextControl />
-			</PanelBody>
-		</InspectorControls>
-		<p { ...useBlockProps() }>
-			{ __(
-				'Gutenberg A B Test – hello from the editor!',
-				'gutenberg-a-b-test'
-			) }
-		</p>
+		<>
+			<InspectorControls>
+				<PanelBody>
+					<TextControl
+					label="ID"
+					value={ id || '' }
+					onChange={
+						( value ) =>
+							setAttributes(
+								{ id: value }
+							)
+					} />
+				</PanelBody>
+			</InspectorControls>
+			<div { ...useBlockProps() }>
+				<InnerBlocks 
+					template={
+						[
+							[
+								'create-block/ab-variant',
+								{
+									label: 'A'
+								}
+
+							],
+							[
+								'create-block/ab-variant',
+								{
+									label: 'B'
+								}
+
+							]
+						]
+					}
+					allowedBlocks={['create-block/ab-variant']}
+					templateLock="all"
+					orientation="horizontal"
+				/>
+			</div>
+		</>
 	);
 }

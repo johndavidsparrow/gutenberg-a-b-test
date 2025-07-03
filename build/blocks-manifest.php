@@ -41,6 +41,7 @@ return array(
 		)
 	),
 	'ab-variant' => array(
+		'name' => 'create-block/ab-variant',
 		'title' => 'A/B Test Variant',
 		'category' => 'widgets',
 		'icon' => 'randomize',

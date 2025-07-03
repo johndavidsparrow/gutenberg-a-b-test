@@ -1,163 +1,6 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/gutenberg-a-b-test/ab-container/block.json":
-/*!********************************************************!*\
-  !*** ./src/gutenberg-a-b-test/ab-container/block.json ***!
-  \********************************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"title":"A/B Test Container","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false}}');
-
-/***/ }),
-
-/***/ "./src/gutenberg-a-b-test/ab-container/edit.js":
-/*!*****************************************************!*\
-  !*** ./src/gutenberg-a-b-test/ab-container/edit.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Edit)
-/* harmony export */ });
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
-
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-
-
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {Element} Element to render.
- */
-
-function Edit() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
-      template: [['create-block/ab-variant', {
-        label: 'A'
-      }], ['create-block/ab-variant', {
-        label: 'B'
-      }]],
-      allowedBlocks: ['create-block/ab-variant'],
-      templateLock: "all",
-      orientation: "horizontal"
-    })
-  });
-}
-
-/***/ }),
-
-/***/ "./src/gutenberg-a-b-test/ab-container/index.js":
-/*!******************************************************!*\
-  !*** ./src/gutenberg-a-b-test/ab-container/index.js ***!
-  \******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/gutenberg-a-b-test/ab-container/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/gutenberg-a-b-test/ab-container/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/gutenberg-a-b-test/ab-container/block.json");
-/**
- * Registers a new block provided a unique name and an object defining its behavior.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-
-
-/**
- * Internal dependencies
- */
-
-
-
-
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__.name, {
-  /**
-   * @see ./edit.js
-   */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
-  /**
-   * @see ./save.js
-   */
-  save: _save__WEBPACK_IMPORTED_MODULE_2__["default"],
-  parent: ['create-block/gutenberg-a-b-test']
-});
-
-/***/ }),
-
-/***/ "./src/gutenberg-a-b-test/ab-container/save.js":
-/*!*****************************************************!*\
-  !*** ./src/gutenberg-a-b-test/ab-container/save.js ***!
-  \*****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ save)
-/* harmony export */ });
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-
-
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- *
- * @return {Element} Element to render.
- */
-
-function save() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save(),
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})
-  });
-}
-
-/***/ }),
 
 /***/ "./src/gutenberg-a-b-test/ab-variant/block.json":
 /*!******************************************************!*\
@@ -165,8 +8,7 @@ function save() {
   \******************************************************/
 /***/ ((module) => {
 
-"use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"title":"A/B Test Variant","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"create-block/ab-variant","title":"A/B Test Variant","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false}}');
 
 /***/ }),
 
@@ -176,7 +18,6 @@ module.exports = /*#__PURE__*/JSON.parse('{"title":"A/B Test Variant","category"
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Edit)
@@ -226,7 +67,6 @@ function Edit() {
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
@@ -260,7 +100,8 @@ __webpack_require__.r(__webpack_exports__);
   /**
    * @see ./save.js
    */
-  save: _save__WEBPACK_IMPORTED_MODULE_2__["default"]
+  save: _save__WEBPACK_IMPORTED_MODULE_2__["default"],
+  parent: ['create-block/gutenberg-a-b-test']
 });
 
 /***/ }),
@@ -271,7 +112,6 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ save)
@@ -313,7 +153,6 @@ function save() {
   \*******************************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/gutenberg-a-b-test","version":"0.1.0","title":"Gutenberg A B Test","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string","label":"Tester"}},"example":{},"supports":{"html":false},"textdomain":"gutenberg-a-b-test","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }),
@@ -322,9 +161,95 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /*!****************************************!*\
   !*** ./src/gutenberg-a-b-test/edit.js ***!
   \****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/src/gutenberg-a-b-test/edit.js: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (39:2)\n\n\u001b[0m \u001b[90m 37 |\u001b[39m \t\t\t\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mPanelBody\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 38 |\u001b[39m \t\t\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mInspectorControls\u001b[39m\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m \t\t\u001b[33m<\u001b[39m\u001b[33mp\u001b[39m { \u001b[33m...\u001b[39museBlockProps() }\u001b[33m>\u001b[39m\n \u001b[90m    |\u001b[39m \t\t\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m \t\t\t{ __(\n \u001b[90m 41 |\u001b[39m \t\t\t\t\u001b[32m'Gutenberg A B Test – hello from the editor!'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 42 |\u001b[39m \t\t\t\t\u001b[32m'gutenberg-a-b-test'\u001b[39m\u001b[0m\n    at constructor (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:367:19)\n    at JSXParserMixin.raise (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:6627:19)\n    at JSXParserMixin.jsxParseElementAt (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:4772:18)\n    at JSXParserMixin.jsxParseElement (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:4779:17)\n    at JSXParserMixin.parseExprAtom (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:4789:19)\n    at JSXParserMixin.parseExprSubscripts (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11076:23)\n    at JSXParserMixin.parseUpdate (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11061:21)\n    at JSXParserMixin.parseMaybeUnary (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11041:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10894:61)\n    at JSXParserMixin.parseExprOps (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10899:23)\n    at JSXParserMixin.parseMaybeConditional (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10876:23)\n    at JSXParserMixin.parseMaybeAssign (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10826:21)\n    at /Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10795:39\n    at JSXParserMixin.allowInAnd (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12427:12)\n    at JSXParserMixin.parseMaybeAssignAllowIn (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10795:17)\n    at JSXParserMixin.parseMaybeAssignAllowInOrVoidPattern (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12494:17)\n    at JSXParserMixin.parseParenAndDistinguishExpression (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11674:28)\n    at JSXParserMixin.parseExprAtom (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11326:23)\n    at JSXParserMixin.parseExprAtom (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:4794:20)\n    at JSXParserMixin.parseExprSubscripts (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11076:23)\n    at JSXParserMixin.parseUpdate (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11061:21)\n    at JSXParserMixin.parseMaybeUnary (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:11041:23)\n    at JSXParserMixin.parseMaybeUnaryOrPrivate (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10894:61)\n    at JSXParserMixin.parseExprOps (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10899:23)\n    at JSXParserMixin.parseMaybeConditional (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10876:23)\n    at JSXParserMixin.parseMaybeAssign (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10826:21)\n    at JSXParserMixin.parseExpressionBase (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10779:23)\n    at /Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10775:39\n    at JSXParserMixin.allowInAnd (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12422:16)\n    at JSXParserMixin.parseExpression (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:10775:17)\n    at JSXParserMixin.parseReturnStatement (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13142:28)\n    at JSXParserMixin.parseStatementContent (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12798:21)\n    at JSXParserMixin.parseStatementLike (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12767:17)\n    at JSXParserMixin.parseStatementListItem (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12747:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13316:61)\n    at JSXParserMixin.parseBlockBody (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13309:10)\n    at JSXParserMixin.parseBlock (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13297:10)\n    at JSXParserMixin.parseFunctionBody (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12101:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12087:10)\n    at /Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13445:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12404:14)\n    at JSXParserMixin.parseFunction (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13444:10)\n    at JSXParserMixin.parseExportDefaultExpression (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13907:19)\n    at JSXParserMixin.parseExport (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13828:25)\n    at JSXParserMixin.parseStatementContent (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12878:27)\n    at JSXParserMixin.parseStatementLike (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12767:17)\n    at JSXParserMixin.parseModuleItem (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12744:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13316:36)\n    at JSXParserMixin.parseBlockBody (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:13309:10)\n    at JSXParserMixin.parseProgram (/Users/johnsparrow/Sites/Learning/WP-Sandbox/wp-content/plugins/gutenberg-a-b-test/node_modules/@babel/parser/lib/index.js:12625:10)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/gutenberg-a-b-test/editor.scss");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/**
+ * Retrieves the translation of text.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
+ */
+
+
+/**
+ * React hook that is used to mark the block wrapper element.
+ * It provides all the necessary props like the class name.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
+ */
+
+
+/**
+ * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
+ * Those files can contain any CSS code that gets applied to the editor.
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * The edit function describes the structure of your block in the context of the
+ * editor. This represents what the editor will render when the block is used.
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
+ *
+ * @return {Element} Element to render.
+ */
+
+function Edit(attributes, setAttributes) {
+  const {
+    id
+  } = attributes;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+          label: "ID",
+          value: id || '',
+          onChange: value => setAttributes({
+            id: value
+          })
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(),
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
+        template: [['create-block/ab-variant', {
+          label: 'A'
+        }], ['create-block/ab-variant', {
+          label: 'B'
+        }]],
+        allowedBlocks: ['create-block/ab-variant'],
+        templateLock: "all",
+        orientation: "horizontal"
+      })
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./src/gutenberg-a-b-test/editor.scss":
+/*!********************************************!*\
+  !*** ./src/gutenberg-a-b-test/editor.scss ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -334,7 +259,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
@@ -342,8 +266,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/gutenberg-a-b-test/edit.js");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/gutenberg-a-b-test/save.js");
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/gutenberg-a-b-test/block.json");
-/* harmony import */ var _ab_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ab-container */ "./src/gutenberg-a-b-test/ab-container/index.js");
-/* harmony import */ var _ab_variant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ab-variant */ "./src/gutenberg-a-b-test/ab-variant/index.js");
+/* harmony import */ var _ab_variant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ab-variant */ "./src/gutenberg-a-b-test/ab-variant/index.js");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -367,6 +290,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import './ab-container';
 
 
 /**
@@ -393,7 +317,6 @@ __webpack_require__.r(__webpack_exports__);
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ save)
@@ -421,9 +344,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function save() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save(),
-    children: 'Gutenberg A B Test – hello from the saved content!'
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})
   });
 }
 
@@ -435,7 +358,6 @@ function save() {
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -448,7 +370,6 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["blockEditor"];
 
 /***/ }),
@@ -459,8 +380,17 @@ module.exports = window["wp"]["blockEditor"];
   \********************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
 
 /***/ }),
 
@@ -470,7 +400,6 @@ module.exports = window["wp"]["blocks"];
   \******************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["i18n"];
 
 /***/ }),
@@ -481,7 +410,6 @@ module.exports = window["wp"]["i18n"];
   \**********************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["ReactJSXRuntime"];
 
 /***/ })

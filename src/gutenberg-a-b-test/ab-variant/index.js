@@ -27,4 +27,5 @@ registerBlockType( metadata.name, {
 	 * @see ./save.js
 	 */
 	save,
+	parent: ['create-block/gutenberg-a-b-test']
 } );
