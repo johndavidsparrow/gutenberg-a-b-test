@@ -261,6 +261,13 @@ function Edit({
     id,
     cookieExp
   } = attributes;
+  const sanitizeToNumbers = value => {
+    const strValue = String(value);
+    const onlyNumbers = strValue.replace(/[^0-9]/g, '');
+    setAttributes({
+      cookieExp: onlyNumbers
+    });
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
@@ -273,10 +280,7 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
           label: "Cookie Expiration (Days)",
           value: cookieExp || '',
-          type: "number",
-          onChange: value => setAttributes({
-            cookieExp: value
-          })
+          onChange: value => sanitizeToNumbers(value)
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {

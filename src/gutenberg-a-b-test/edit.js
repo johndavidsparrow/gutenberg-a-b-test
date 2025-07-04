@@ -31,6 +31,14 @@ import './editor.scss';
  */
 export default function Edit( { attributes, setAttributes } ) {
 	const { id, cookieExp } = attributes;
+
+	const sanitizeToNumbers = (value) => {
+		const strValue = String(value);
+		const onlyNumbers = strValue.replace(/[^0-9]/g, '');
+		setAttributes(
+			{ cookieExp: onlyNumbers }
+		)
+	}
 	return (
 		<>
 			<InspectorControls>
@@ -47,12 +55,9 @@ export default function Edit( { attributes, setAttributes } ) {
 					<TextControl
 					label="Cookie Expiration (Days)"
 					value={ cookieExp || '' }
-					type="number"
 					onChange={
 						( value ) =>
-							setAttributes(
-								{ cookieExp: value }
-							)
+							sanitizeToNumbers( value )
 					} />
 				</PanelBody>
 			</InspectorControls>
