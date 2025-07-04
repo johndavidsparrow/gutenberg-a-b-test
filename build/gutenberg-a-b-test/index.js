@@ -198,7 +198,7 @@ function save({
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/gutenberg-a-b-test","version":"0.1.0","title":"Gutenberg A B Test","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string"},"cookieExp":{"type":"integer"}},"example":{},"supports":{"html":false},"textdomain":"gutenberg-a-b-test","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/gutenberg-a-b-test","version":"0.1.0","title":"Gutenberg A B Test","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string"},"cookieExp":{"type":"integer"}},"example":{},"supports":{"html":false},"textdomain":"gutenberg-a-b-test","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ }),
 

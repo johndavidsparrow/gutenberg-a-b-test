@@ -27,8 +27,7 @@ return array(
 		'textdomain' => 'gutenberg-a-b-test',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css',
-		'viewScript' => 'file:./view.js'
+		'style' => 'file:./style-index.css'
 	),
 	'ab-container' => array(
 		'title' => 'A/B Test Container',
