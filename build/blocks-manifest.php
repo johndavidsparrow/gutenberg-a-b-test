@@ -12,8 +12,10 @@ return array(
 		'description' => 'Example block scaffolded with Create Block tool.',
 		'attributes' => array(
 			'id' => array(
-				'type' => 'string',
-				'label' => 'Tester'
+				'type' => 'string'
+			),
+			'cookieExp' => array(
+				'type' => 'integer'
 			)
 		),
 		'example' => array(

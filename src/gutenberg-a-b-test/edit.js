@@ -29,8 +29,8 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit( attributes, setAttributes ) {
-	const { id } = attributes;
+export default function Edit( { attributes, setAttributes } ) {
+	const { id, cookieExp } = attributes;
 	return (
 		<>
 			<InspectorControls>
@@ -42,6 +42,16 @@ export default function Edit( attributes, setAttributes ) {
 						( value ) =>
 							setAttributes(
 								{ id: value }
+							)
+					} />
+					<TextControl
+					label="Cookie Expiration (Days)"
+					value={ cookieExp || '' }
+					type="number"
+					onChange={
+						( value ) =>
+							setAttributes(
+								{ cookieExp: value }
 							)
 					} />
 				</PanelBody>

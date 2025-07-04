@@ -9,8 +9,10 @@
   "description": "Example block scaffolded with Create Block tool.",
   "attributes": {
     "id": {
-      "type": "string",
-      "label": "Tester"
+      "type": "string"
+    },
+    "cookieExp": {
+      "type": "integer"
     }
   },
   "example": {},
