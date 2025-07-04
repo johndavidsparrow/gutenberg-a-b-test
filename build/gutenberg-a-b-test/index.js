@@ -8,7 +8,7 @@
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"create-block/ab-variant","title":"A/B Test Variant","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string","default":"A"},"label":{"type":"string","default":"A"},"weighting":{"type":"string","default":"50"}},"example":{},"supports":{"html":false}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"create-block/ab-variant","title":"A/B Test Variant","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string","default":"A"},"label":{"type":"string","default":"A"},"weighting":{"type":"string","default":"50"}},"example":{},"supports":{"html":false},"render":"file:./render.php"}');
 
 /***/ }),
 
@@ -180,7 +180,9 @@ function save({
   attributes
 }) {
   const {
-    label
+    label,
+    id,
+    weighting
   } = attributes;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save(),
@@ -198,7 +200,7 @@ function save({
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/gutenberg-a-b-test","version":"0.1.0","title":"Gutenberg A B Test","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string"},"cookieExp":{"type":"integer"}},"example":{},"supports":{"html":false},"textdomain":"gutenberg-a-b-test","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/gutenberg-a-b-test","version":"0.1.0","title":"Gutenberg A B Test","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string"},"cookieExp":{"type":"integer"}},"example":{},"supports":{"html":false},"textdomain":"gutenberg-a-b-test","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }),
 

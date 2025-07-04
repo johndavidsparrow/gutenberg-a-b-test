@@ -16,7 +16,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save( { attributes } ) {
-    const { label } = attributes;
+    const { label, id, weighting } = attributes;
     return (
         <div { ...useBlockProps.save() }>
             <h4>Variant: {label}</h4>
