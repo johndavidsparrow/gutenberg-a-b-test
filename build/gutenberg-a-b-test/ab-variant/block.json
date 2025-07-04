@@ -21,6 +21,5 @@
   "example": {},
   "supports": {
     "html": false
-  },
-  "render": "file:./render.php"
+  }
 }

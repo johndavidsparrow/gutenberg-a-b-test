@@ -8,7 +8,7 @@
   \******************************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"name":"create-block/ab-variant","title":"A/B Test Variant","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string","default":"A"},"label":{"type":"string","default":"A"},"weighting":{"type":"string","default":"50"}},"example":{},"supports":{"html":false},"render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"create-block/ab-variant","title":"A/B Test Variant","category":"widgets","icon":"randomize","description":"Example block scaffolded with Create Block tool.","attributes":{"id":{"type":"string","default":"A"},"label":{"type":"string","default":"A"},"weighting":{"type":"string","default":"50"}},"example":{},"supports":{"html":false}}');
 
 /***/ }),
 

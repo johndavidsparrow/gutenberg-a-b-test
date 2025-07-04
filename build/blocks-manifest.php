@@ -67,7 +67,6 @@ return array(
 		),
 		'supports' => array(
 			'html' => false
-		),
-		'render' => 'file:./render.php'
+		)
 	)
 );
