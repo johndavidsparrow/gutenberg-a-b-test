@@ -26,11 +26,34 @@ if ( isset( $_COOKIE[$cookie_name] ) ) {
 }
 
 if ( $chosen_index === null ) {
+
+
+    // Create an array of weightings
+    $weightings = array();
+    foreach( $parsed_blocks as $index => $child ) {
+        $weightings[$index] = $child['attrs']['weighting'];
+    }
+
+    print_r( $weightings );
+
+
+
     // Select a random weighted child and write cookie
+    $rnd = rand(1, 100);
+    $weight_total = 0;
+
+
+
+
+
 
 } else {
     echo render_block( $parsed_blocks[$chosen_index] );
 }
+
+
+
+
 
 $weightings = array();
 
