@@ -14,7 +14,7 @@ $cookie_exp   = $attributes['cookieExp'];
 $cookie_name  = 'abtest_' . $parent_id;
 $chosen_index = null;
 
-// echo render_block( $parsed_blocks[1] );
+// echo render_block( $parsed_blocks[$chosen_index] );
 
 // Do we have a cookie matching the ID? If so, we don't need to bother with weightings
 if ( isset( $_COOKIE[$cookie_name] ) ) {
@@ -26,17 +26,11 @@ if ( isset( $_COOKIE[$cookie_name] ) ) {
 }
 
 if ( $chosen_index === null ) {
-
+    // Select a random weighted child and write cookie
 
 } else {
-
-
+    echo render_block( $parsed_blocks[$chosen_index] );
 }
-
-
-// Else
-
-
 
 $weightings = array();
 
