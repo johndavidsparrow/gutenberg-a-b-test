@@ -26,9 +26,7 @@ if ( isset( $_COOKIE[$cookie_name] ) ) {
 }
 
 if ( $chosen_index === null ) {
-
-
-    // Create an array of weightings
+    
     $weightings = array();
     $weightings_sum = 0;
     foreach( $parsed_blocks as $index => $child ) {
@@ -58,7 +56,7 @@ if ( $chosen_index === null ) {
     echo 'Chosen index is ' . $chosen_index;
 
     // set cookie here TODO
-
+    // time()+60*60*24*30 will set the cookie to expire in 30 days
 
 
 } else {
