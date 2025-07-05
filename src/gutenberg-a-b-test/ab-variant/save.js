@@ -19,7 +19,6 @@ export default function save( { attributes } ) {
     const { label, id, weighting } = attributes;
     return (
         <div { ...useBlockProps.save() }>
-            <h4>Variant: {label}</h4>
             <InnerBlocks.Content />
         </div>
     );

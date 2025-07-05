@@ -34,13 +34,6 @@ if ( $chosen_index === null ) {
 }
 
 
-
-
-
-
-
-// echo (int) '12334123';
-
 // Else
 
 
