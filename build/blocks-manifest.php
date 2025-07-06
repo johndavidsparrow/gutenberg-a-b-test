@@ -30,18 +30,6 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
-	'ab-container' => array(
-		'title' => 'A/B Test Container',
-		'category' => 'widgets',
-		'icon' => 'randomize',
-		'description' => 'Example block scaffolded with Create Block tool.',
-		'example' => array(
-			
-		),
-		'supports' => array(
-			'html' => false
-		)
-	),
 	'ab-variant' => array(
 		'name' => 'create-block/ab-variant',
 		'title' => 'A/B Test Variant',
