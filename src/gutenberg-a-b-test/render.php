@@ -10,7 +10,7 @@ Info we need:
 
 */
 $parent_id    = $attributes['id'];
-$cookie_exp   = $attributes['cookieExp'];
+$cookie_exp   = (int) $attributes['cookieExp'];
 $cookie_name  = 'abtest_' . $parent_id;
 $chosen_index = null;
 
@@ -26,7 +26,6 @@ if ( isset( $_COOKIE[$cookie_name] ) ) {
 }
 
 if ( $chosen_index === null ) {
-    
     $weightings = array();
     $weightings_sum = 0;
     foreach( $parsed_blocks as $index => $child ) {
@@ -56,12 +55,16 @@ if ( $chosen_index === null ) {
     echo 'Chosen index is ' . $chosen_index;
 
     // set cookie here TODO
+    // setcookie()
     // time()+60*60*24*30 will set the cookie to expire in 30 days
 
-
-} else {
-    echo render_block( $parsed_blocks[$chosen_index] );
-}
+    // JDS TODO: Should this be in an else clause? It should output regardless?
+    
+} else { ?>
+    <div <?php get_block_wrapper_attributes(); ?>>
+        <?php echo render_block( $parsed_blocks[$chosen_index] ); ?>
+    </div>
+<?php }
 
 
 
