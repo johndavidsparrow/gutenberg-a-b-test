@@ -59,12 +59,12 @@ if ( $chosen_index === null ) {
     // time()+60*60*24*30 will set the cookie to expire in 30 days
 
     // JDS TODO: Should this be in an else clause? It should output regardless?
-    
-} else { ?>
-    <div <?php get_block_wrapper_attributes(); ?>>
+
+} ?>
+    <div <?php echo get_block_wrapper_attributes(); ?>>
         <?php echo render_block( $parsed_blocks[$chosen_index] ); ?>
     </div>
-<?php }
+<?php 
 
 
 
