@@ -1,20 +1,10 @@
 <?php
 
 $parsed_blocks = $block->parsed_block['innerBlocks'];
-/*
-Info we need:
-
-- $attributes for ID and cookie exp
-- block info from both blocks for weighting
-
-
-*/
 $parent_id    = $attributes['id'];
 $cookie_exp   = (int) $attributes['cookieExp'];
 $cookie_name  = 'abtest_' . $parent_id;
 $chosen_index = null;
-
-// echo render_block( $parsed_blocks[$chosen_index] );
 
 // Do we have a cookie matching the ID? If so, we don't need to bother with weightings
 if ( isset( $_COOKIE[$cookie_name] ) ) {
