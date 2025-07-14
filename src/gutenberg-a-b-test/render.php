@@ -40,9 +40,8 @@ if ( $chosen_index === null ) {
             break;
         }
     }
-
-    echo 'Random number is ' . $rnd;
-    echo 'Chosen index is ' . $chosen_index;
+    $cookie_time = 60 * 60 * 24 * $cookie_exp;
+    
 
     // set cookie here TODO
     // setcookie()
