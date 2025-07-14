@@ -18,6 +18,7 @@ if ( isset( $_COOKIE[$cookie_name] ) ) {
 if ( $chosen_index === null ) {
     $weightings = array();
     $weightings_sum = 0;
+    $weight_total = 0;
     foreach( $parsed_blocks as $index => $child ) {
         $weightings[$index] = $child['attrs']['weighting'];
         $weight_total += $child['attrs']['weighting'];
@@ -28,12 +29,10 @@ if ( $chosen_index === null ) {
             1 => 50
         ];
     }
-
-    // Select a random weighted child and write cookie
+    
     $rnd = rand(1, 100);
     $weight_total = 0;
     foreach( $weightings as $index => $weight ) {
-        // Add to weight total
         $weight_total += $weight;
         if ( $rnd <= $weight_total ) {
             $chosen_index = $index;
@@ -41,30 +40,17 @@ if ( $chosen_index === null ) {
         }
     }
     $cookie_time = 60 * 60 * 24 * $cookie_exp;
-    
-
-    // set cookie here TODO
-    // setcookie()
-    // time()+60*60*24*30 will set the cookie to expire in 30 days
-
-    // JDS TODO: Should this be in an else clause? It should output regardless?
-
+    setcookie( $cookie_name, $chosen_index, strtotime( '+' .  $cookie_exp . ' days' ) );
 } ?>
     <div <?php echo get_block_wrapper_attributes(); ?>>
         <?php echo render_block( $parsed_blocks[$chosen_index] ); ?>
     </div>
 <?php 
 
-
-
-
-
 $weightings = array();
 
 foreach( $parsed_blocks as $child ) {
     $weightings[] = $child['attrs']['weighting'];
 }
-
-
 
 ?>
