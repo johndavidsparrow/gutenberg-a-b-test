@@ -5,5 +5,15 @@
  */
 
 .wp-block-create-block-gutenberg-a-b-test {
-	border: 1px dotted #f00;
+	border: 1px dotted blue;
+	padding: 5px;
+	[data-type="create-block/ab-variant"] {
+		&:first-of-type {
+			border: 1px dotted green;
+		}
+		&:last-of-type {
+			border: 1px dotted red;
+		}
+		border: 1px solid yellow;
+	}
 }

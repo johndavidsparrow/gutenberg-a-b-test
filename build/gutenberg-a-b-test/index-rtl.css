@@ -1,1 +1,1 @@
-.wp-block-create-block-gutenberg-a-b-test{border:1px dotted red}
+.wp-block-create-block-gutenberg-a-b-test{border:1px dotted blue;padding:5px}.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]{border:1px solid #ff0}.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]:first-of-type{border:1px dotted green}.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]:last-of-type{border:1px dotted red}
