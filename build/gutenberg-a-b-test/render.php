@@ -42,7 +42,7 @@ if ( $chosen_index === null ) {
     $cookie_time = 60 * 60 * 24 * $cookie_exp;
     setcookie( $cookie_name, $chosen_index, strtotime( '+' .  $cookie_exp . ' days' ) );
 } ?>
-    <div <?php echo get_block_wrapper_attributes(); ?>>
+    <div <?php echo get_block_wrapper_attributes(); ?> asdsad>
         <?php echo render_block( $parsed_blocks[$chosen_index] ); ?>
     </div>
 <?php 

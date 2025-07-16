@@ -25,6 +25,7 @@ return array(
 			'html' => false
 		),
 		'textdomain' => 'gutenberg-a-b-test',
+		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'render' => 'file:./render.php'
 	),
