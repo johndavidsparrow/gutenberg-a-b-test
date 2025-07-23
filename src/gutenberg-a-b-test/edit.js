@@ -33,9 +33,9 @@ export default function Edit( { attributes, setAttributes } ) {
 	const { id, cookieExp } = attributes;
 
 	const sanitizeToNumbers = (value) => {
-		const strValue = String(value);
-		const onlyNumbers = strValue.replace(/[^0-9]/g, '');
-		return onlyNumbers;
+		const strValue = String(value)
+		const onlyNumbers = strValue.replace(/[^0-9]/g, '')
+		return onlyNumbers
 	};
 
 	const checkExpForBlank = (value) => {
