@@ -21,13 +21,19 @@ For the end user, the weighting of each variant (totalling 100%) will decide how
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= What happens when the cookie expires =
 
-An answer to that question.
+Once the cookie expires, the behavior is as if the user has not visited the page. It will once again choose a variant based on the weighting and set a new cookie
 
-= What about foo bar? =
+= How do I reset the selection for everyone? =
 
-Answer to foo bar dilemma.
+To start the A/B variants over from scratch for all users, change the ID of the main A/B block. The old cookie will remain, and expire per the previously set expiration time, but the script will no longer look for it, and look for the new cookie ID instead.
+
+= How does weighting work? =
+
+For each variant, you can choose a number between 1 and 99. If a variant has 1 as its value, it has a 1% chance of being chosen.
+
+If your weightings do not add up to 100, default values of 50 will be applied to each variant.
 
 == Screenshots ==
 
