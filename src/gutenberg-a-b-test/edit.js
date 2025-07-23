@@ -35,10 +35,8 @@ export default function Edit( { attributes, setAttributes } ) {
 	const sanitizeToNumbers = (value) => {
 		const strValue = String(value);
 		const onlyNumbers = strValue.replace(/[^0-9]/g, '');
-		setAttributes(
-			{ cookieExp: onlyNumbers }
-		)
-	}
+		return onlyNumbers;
+	};
 	return (
 		<>
 			<InspectorControls>
@@ -56,8 +54,12 @@ export default function Edit( { attributes, setAttributes } ) {
 					label="Cookie Expiration (Days)"
 					value={ cookieExp || '' }
 					onChange={
-						( value ) =>
-							sanitizeToNumbers( value )
+						( value ) => {
+							const onlyNumbers = sanitizeToNumbers( value )
+							setAttributes(
+							{ cookieExp: onlyNumbers }
+							)
+						}
 					} />
 				</PanelBody>
 			</InspectorControls>

@@ -12,7 +12,7 @@
       "type": "string"
     },
     "cookieExp": {
-      "type": "integer"
+      "type": "string"
     }
   },
   "example": {},

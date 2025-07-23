@@ -1,29 +1,23 @@
 === Gutenberg A B Test ===
-Contributors:      The WordPress Contributors
+Contributors:      John Sparrow
 Tags:              block
 Tested up to:      6.7
 Stable tag:        0.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+Simple block to add A/B variants of content and weight them.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+This block is a simple way to add two variants of content to a page, and weight each one by percentage. The container also allows the author to specify a cookie expiration time.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+For the end user, the weighting of each variant (totalling 100%) will decide how likely each variant is to show. Once displayed for the first time, a cookie is written with the containing block's ID value, locking that browser into that varaint for n number of days (cookie expiration time).
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Upload the plugin files to the `/wp-content/plugins/gutenberg-a-b-test` directory, or install the plugin through the WordPress plugins screen directly.
 1. Activate the plugin through the 'Plugins' screen in WordPress
-
 
 == Frequently Asked Questions ==
 

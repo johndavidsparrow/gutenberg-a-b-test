@@ -1,1 +1,21 @@
-.wp-block-create-block-gutenberg-a-b-test{border:1px dotted blue;padding:5px}.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]{border:1px solid #ff0}.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]:first-of-type{border:1px dotted green}.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]:last-of-type{border:1px dotted red}
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/gutenberg-a-b-test/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-gutenberg-a-b-test {
+  border: 1px dotted blue;
+  padding: 5px;
+}
+.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"] {
+  border: 1px solid yellow;
+}
+.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]:first-of-type {
+  border: 1px dotted green;
+}
+.wp-block-create-block-gutenberg-a-b-test [data-type="create-block/ab-variant"]:last-of-type {
+  border: 1px dotted red;
+}
