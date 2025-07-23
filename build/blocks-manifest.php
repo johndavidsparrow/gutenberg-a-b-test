@@ -5,11 +5,11 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'create-block/gutenberg-a-b-test',
-		'version' => '0.1.0',
+		'version' => '0.2.0',
 		'title' => 'Gutenberg A B Test',
 		'category' => 'widgets',
 		'icon' => 'randomize',
-		'description' => 'Example block scaffolded with Create Block tool.',
+		'description' => 'Simple block to add A/B variants of content and weight them.',
 		'attributes' => array(
 			'id' => array(
 				'type' => 'string'

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Gutenberg A/B Test
- * Description:       Simple A/B testing block, allowing you to choose weighting and cookie expiration
+ * Description:       Simple A/B testing block, allowing you to choose weighting and cookie expiration.
  * Version:           0.2.0
  * Author:            John Sparrow
  * License:           GPL-2.0-or-later
