@@ -37,6 +37,16 @@ export default function Edit( { attributes, setAttributes } ) {
 		const onlyNumbers = strValue.replace(/[^0-9]/g, '');
 		return onlyNumbers;
 	};
+
+	const checkExpForBlank = (value) => {
+		const isEmpty = value.target.value === '';
+		if (isEmpty) {
+			setAttributes({
+				cookieExp: '30'
+			})
+		}
+	};
+
 	return (
 		<>
 			<InspectorControls>
@@ -45,7 +55,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					label="ID"
 					value={ id || '' }
 					onChange={
-						( value ) =>
+						( value ) => 
 							setAttributes(
 								{ id: value }
 							)
@@ -57,8 +67,13 @@ export default function Edit( { attributes, setAttributes } ) {
 						( value ) => {
 							const onlyNumbers = sanitizeToNumbers( value )
 							setAttributes(
-							{ cookieExp: onlyNumbers }
+								{ cookieExp: onlyNumbers }
 							)
+						}
+					}
+					onBlur={
+						( value ) => {
+							checkExpForBlank(value);
 						}
 					} />
 				</PanelBody>
