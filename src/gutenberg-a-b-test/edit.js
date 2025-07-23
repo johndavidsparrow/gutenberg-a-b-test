@@ -32,13 +32,13 @@ import './editor.scss';
 export default function Edit( { attributes, setAttributes } ) {
 	const { id, cookieExp } = attributes;
 
-	const sanitizeToNumbers = (value) => {
+	const sanitizeToNumbers = ( value ) => {
 		const strValue = String(value)
 		const onlyNumbers = strValue.replace(/[^0-9]/g, '')
 		return onlyNumbers
 	};
 
-	const checkExpForBlank = (value) => {
+	const checkExpForBlank = ( value ) => {
 		const isEmpty = value.target.value === '';
 		if (isEmpty) {
 			setAttributes({
@@ -73,7 +73,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					}
 					onBlur={
 						( value ) => {
-							checkExpForBlank(value);
+							checkExpForBlank( value );
 						}
 					} />
 				</PanelBody>
@@ -98,7 +98,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							]
 						]
 					}
-					allowedBlocks={['create-block/ab-variant']}
+					allowedBlocks={ ['create-block/ab-variant'] }
 					orientation="horizontal"
 				/>
 			</div>

@@ -81,7 +81,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps() }>
-				<h4>Variant: {label}</h4>
+				<h4>Variant: { label }</h4>
 				<InnerBlocks />
 			</div>
 		</>
