@@ -15,7 +15,8 @@ return array(
 				'type' => 'string'
 			),
 			'cookieExp' => array(
-				'type' => 'string'
+				'type' => 'string',
+				'default' => '30'
 			)
 		),
 		'example' => array(

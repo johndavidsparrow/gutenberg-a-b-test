@@ -12,7 +12,8 @@
       "type": "string"
     },
     "cookieExp": {
-      "type": "string"
+      "type": "string",
+      "default": "30"
     }
   },
   "example": {},
