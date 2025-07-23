@@ -26,6 +26,20 @@ import { PanelBody, TextControl } from '@wordpress/components';
 export default function Edit( { attributes, setAttributes } ) {
 	// add the inspector tools for the weighting
 	const { id, label, weighting } = attributes;
+	const sanitizeToNumbers = (value) => {
+		const strValue = String(value)
+		const onlyNumbers = strValue.replace(/[^0-9]/g, '')
+		const onlyNumbersInt = Number(onlyNumbers);
+		let onlyNumbersReturn = 0;
+		if (onlyNumbers !== '' && onlyNumbersInt > 99) {
+			onlyNumbersReturn = '99'
+		} else if ( onlyNumbers !== '' && onlyNumbersInt < 1 ) {
+			onlyNumbersReturn = '1'
+		} else {
+			onlyNumbersReturn = onlyNumbers
+		}
+		return onlyNumbersReturn
+	};
 	return (
 		<>
 			<InspectorControls>
@@ -55,13 +69,14 @@ export default function Edit( { attributes, setAttributes } ) {
 						label="Weighting"
 						value={ weighting || '' }
 						onChange={
-							( value ) =>
+							( value ) => {
+							const sanitizedNumbersForWeighting = sanitizeToNumbers( value )
 								setAttributes(
 									{
-										weighting: value
+										weighting: sanitizedNumbersForWeighting
 									}
 								)
-						}
+						}	}
 					/>
 				</PanelBody>
 			</InspectorControls>

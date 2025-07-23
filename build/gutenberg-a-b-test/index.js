@@ -59,6 +59,20 @@ function Edit({
     label,
     weighting
   } = attributes;
+  const sanitizeToNumbers = value => {
+    const strValue = String(value);
+    const onlyNumbers = strValue.replace(/[^0-9]/g, '');
+    const onlyNumbersInt = Number(onlyNumbers);
+    let onlyNumbersReturn = 0;
+    if (onlyNumbers !== '' && onlyNumbersInt > 99) {
+      onlyNumbersReturn = '99';
+    } else if (onlyNumbers !== '' && onlyNumbersInt < 1) {
+      onlyNumbersReturn = '1';
+    } else {
+      onlyNumbersReturn = onlyNumbers;
+    }
+    return onlyNumbersReturn;
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
@@ -77,9 +91,12 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
           label: "Weighting",
           value: weighting || '',
-          onChange: value => setAttributes({
-            weighting: value
-          })
+          onChange: value => {
+            const sanitizedNumbersForWeighting = sanitizeToNumbers(value);
+            setAttributes({
+              weighting: sanitizedNumbersForWeighting
+            });
+          }
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
