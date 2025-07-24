@@ -4,10 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import {
-	useBlockProps,
-	InnerBlocks,
-	InspectorControls,
+import { useBlockProps, InnerBlocks, InspectorControls,
 } from '@wordpress/block-editor';
 
 import { PanelBody, TextControl } from '@wordpress/components';

@@ -10,7 +10,7 @@ Simple block to add A/B variants of content and weight them.
 
 == Description ==
 
-This block is a simple way to add two variants of content to a page, and weight each one by percentage. The container also allows the author to specify a cookie expiration time.
+This block is a simple way to add two variants of content to a page on a per-block basis, and weight each one by percentage. The container also allows the author to specify a cookie expiration time.
 
 For the end user, the weighting of each variant (totalling 100%) will decide how likely each variant is to show. Once displayed for the first time, a cookie is written with the containing block's ID value, locking that browser into that varaint for n number of days (cookie expiration time).
 
