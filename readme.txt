@@ -21,7 +21,7 @@ For the end user, the weighting of each variant (totalling 100%) will decide how
 
 == Frequently Asked Questions ==
 
-= What happens when the cookie expires =
+= What happens when the cookie expires? =
 
 Once the cookie expires, the behavior is as if the user has not visited the page. It will once again choose a variant based on the weighting and set a new cookie
 
@@ -45,11 +45,5 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+= 0.2.0 =
+* Not broken release
