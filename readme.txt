@@ -1,5 +1,6 @@
 === Gutenberg A B Test ===
 Contributors:      John Sparrow
+Plugin URI:        https://gutenberg-sandbox.showybelt.com/gutenberg-a-b-test-block-demo/
 Tags:              block
 Tested up to:      6.7
 Stable tag:        0.1.0
@@ -13,6 +14,8 @@ Simple block to add A/B variants of content and weight them.
 This block is a simple way to add two variants of content to a page on a per-block basis, and weight each one by percentage. The container also allows the author to specify a cookie expiration time.
 
 For the end user, the weighting of each variant (totalling 100%) will decide how likely each variant is to show. Once displayed for the first time, a cookie is written with the containing block's ID value, locking that browser into that varaint for n number of days (cookie expiration time).
+
+Check out a current demo of the block at: https://gutenberg-sandbox.showybelt.com/gutenberg-a-b-test-block-demo/
 
 == Installation ==
 
